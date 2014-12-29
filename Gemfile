@@ -36,4 +36,5 @@ group :development, :test do
   gem 'pry-stack_explorer'
   gem 'pry-byebug'
   gem 'database_cleaner'
+  gem 'rubocop', require: false
 end
