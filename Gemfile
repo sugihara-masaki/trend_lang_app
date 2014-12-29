@@ -4,6 +4,8 @@ ruby '2.1.2'
 gem 'rails', '4.2.0'
 gem 'pg'
 
+gem 'activerecord-import'
+
 gem 'slim-rails', github: 'ericboehs/slim-rails'
 gem 'therubyracer', platforms: :ruby
 gem 'draper'
@@ -20,6 +22,10 @@ gem 'chartkick'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
+end
+
+group :test do
+  gem 'shoulda-matchers'
 end
 
 group :development, :test do
