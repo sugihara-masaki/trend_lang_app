@@ -1,1 +1,15 @@
 h1.text-center githubでの言語トレンド推移
+= form_tag root_path, method: :get, class: 'form-horizontal' do
+  fieldset
+    .control-group
+      label.control-label 期間
+      .controls
+        = select_tag 'search[term]', options_for_select({'1日' => :day, '1週間' => :week, '1ヶ月' => :month}), prompt: 'すべて'
+    .control-group
+      label.control-label 言語
+      .controls
+        = text_field :search, :language, placeholder: '例）JavaScript'
+    .form-actions
+      = submit_tag '変更'
+
+= line_chart @repositories.group(:language).group_by_day(:create_date).count

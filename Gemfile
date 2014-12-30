@@ -18,6 +18,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder'
 gem 'chartkick'
+gem 'groupdate'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
