@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20150104192559) do
   end
 
   add_index "repository_snapshots", ["create_date", "language"], name: "index_repository_snapshots_on_create_date_and_language", using: :btree
+  add_index "repository_snapshots", ["create_date", "stargazers_count"], name: "index_repository_snapshots_on_create_date_and_stargazers_count", using: :btree
   add_index "repository_snapshots", ["language"], name: "index_repository_snapshots_on_language", using: :btree
+  add_index "repository_snapshots", ["stargazers_count"], name: "index_repository_snapshots_on_stargazers_count", using: :btree
 
 end

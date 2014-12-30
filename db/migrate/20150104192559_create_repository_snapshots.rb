@@ -9,5 +9,7 @@ class CreateRepositorySnapshots < ActiveRecord::Migration
     end
     add_index :repository_snapshots, [:create_date, :language]
     add_index :repository_snapshots, :language
+    add_index :repository_snapshots, [:create_date, :stargazers_count]
+    add_index :repository_snapshots, :stargazers_count
   end
 end
