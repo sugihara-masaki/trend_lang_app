@@ -36,7 +36,6 @@ group :development, :test do
   gem 'spring-commands-rspec'
   gem 'rspec-rails'
   gem 'guard-rspec'
-  gem 'rb-fsevent' if `uname` =~ /Darwin/
   gem 'terminal-notifier-guard'
   gem 'pry-rails'
   gem 'pry-doc'
@@ -44,4 +43,8 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'database_cleaner'
   gem 'rubocop', require: false
+end
+
+group :test, :darwin do
+  gem 'rb-fsevent'
 end
